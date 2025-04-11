@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - AB Studios</title>
+
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+    <script src="assets/js/Jquery3.7.1.min.js"></script>
+</head>
+</head>
+<body class="about-page">
+    
+
+    <div class="preloader">
+        <div class="loader"></div>
+    </div>
+
+     <!-- Header Section -->
+     <header class="header">
+
+        <div class="logo">
+            <a href="index.html">
+                <img src ="assets/images/white-abstudios-logo.png" alt="AB Studios Logo">
+            </a>
+        </div>
+
+        <nav class="nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About us</a></li>
+                <li><a href="services.html">Our Services</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+           
+        </nav>
+
+        <div class="social-media">
+            <a href="#" class="social-icon"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#" class="social-icon"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" class="social-icon"><i class="fa-brands fa-linkedin-in"></i></a>
+        </div>
+
+        <!-- Mobile Menu Button -->
+        <button class="menu-toggle">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+        
+    
+     </header>
+
+     <main>
+
+        <section>
+            <div class="about">
+            </div>
+        </section>
+
+        <section class="our-story">
+            <div class="story-container">
+                <div class="title-wrap">
+                    <span class="sm-title">Get to know us</span>
+                    <h2>Our Story</h2>
+                </div>
+
+                <div class="about-row">
+                    <div class="about-left">
+                        <img src="assets/images/digital brain.png" alt="team">
+                        
+                       
+                    </div>
+                    
+                    <div class="about-right">
+                        <h2 class="autoDisplay">5+ Years of digital competence</h2>
+                        <p class="about-text">Some stories begin in the most unexpected places. 
+                            For AB Studios, it all started in the back row of a high school classroom, where two friends—Ryan (CEO) and Lawrence (Creative Director)—bonded over mischief, creativity, and an unshakable curiosity for innovation.</p>
+                        <p class="about-text">Ryan, with no natural talent for art, often relied on Lawrence's artistic eye for school projects. Even when a class reshuffle separated them, their friendship remained strong. 
+                            Years later, after pursuing separate paths—Ryan in Computer Science and Lawrence in Graphic Design—their shared passion for problem-solving brought them back together.</p>
+                            <p class="about-text">
+                                Over a casual meet-up, with Lawrence savoring his tea and cake while Ryan enjoyed a refreshing glass of passion juice, an idea took shape: to merge creativity and technology into something bigger. 
+                                They envisioned a company that would help businesses stand out in the digital space, combining the power of design, storytelling, and cutting-edge tech.
+                            </p>
+                            <p class="about-text">
+                                That idea became AB Studios—a digital solutions powerhouse committed to pushing creative boundaries and empowering brands with innovative, disruptive, and strategic digital experiences. 
+                                From building that very first website to now serving a diverse range of clients, our journey has been one of continuous learning, evolution, and impact.
+
+                            </p>
+
+                            <p class="about-text">At AB Studios, we don’t just create; we transform ideas into digital excellence.</p>
+                    </div>
+
+
+                </div>
+            </div>
+         </section>
+
+         <section class="mission-vision">
+
+            <div class="mission-vision-container autoDisplay">
+                <div class="mission">
+
+                    <h3>Our Mission</h3>
+                    <p>To harness the power of creativity and technology to craft innovative digital solutions that help businesses grow and thrive.</p>
+
+                </div>
+
+                <div class="divider"></div> <!-- The dividing line -->
+
+                <div class="vision">
+
+                    <h3>Our Vision</h3>
+                    <p>To redefine the digital landscape by pioneering innovative and creative solutions that empower brands, inspire audiences, and shape the future of digital experiences.</p>
+                </div>
+            </div>
+
+         </section>
+         <section class="features-section">
+            <div class="features-container">
+                <div class="intro">
+                    
+                    <h3 class="section-heading autoDisplay">Guiding Principles That Define Us</h3>
+                    <p class="section-description">
+                        Our core values inspire and guide us. They drive our commitment to creativity, innovation, and excellence, ensuring we deliver impactful digital solutions that empower businesses to thrive in a dynamic world.
+
+
+                    </p>
+                </div>
+                <div class="features-list" x-data="{ features: [
+                    { title: 'Innovation', desc: 'Constantly pushing creative and technological boundaries.' },
+                    { title: 'Collaboration', desc: 'Working hand-in-hand with clients to bring ideas to life.' },
+                    { title: 'Excellence', desc: 'Delivering top-tier digital solutions.' },
+                    { title: 'Integrity', desc: 'Transparency and honesty in all dealings.' },
+                ]}">
+                    <ul class="grid">
+                        <template x-for="(item, idx) in features" :key="idx">
+                            <li class="feature-item">
+                                <div class="icon-box">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="icon">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+                                    </svg>
+                                </div>
+                                <h4 class="feature-title" x-text="item.title"></h4>
+                                <p class="feature-desc" x-text="item.desc"></p>
+                            </li>
+                        </template>
+                    </ul>
+                </div>
+            </div>
+
+            <button>
+
+                <a href="contact.html">Your Digital partner</a>
+                
+                
+            </button>
+        </section>
+
+     </main>
+
+     <footer>
+        <div class="footer-container">
+            <div class="sec aboutus">
+                <h2>About Us</h2>
+                <p>
+                    AB Studios is a digital creative agency specializing in marketing, design, software, content, and data. 
+                    We craft innovative solutions that empower brands and drive success.
+                </p>
+                <div class="social-media">
+                    <a href="https://www.facebook.com/share/1648GJkJCL/?mibextid=wwXIfr" class="social-icon"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="https://www.instagram.com/abstudios.inc?igsh=MWxvZXhmcTVkbmg4Yg==" class="social-icon"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/company/abstudios-inc/" class="social-icon"><i class="fa-brands fa-linkedin-in"></i></a>
+                </div>
+
+            </div>
+
+            <div class="sec quicklinks">
+                <h2>Quick Links</h2>
+                <ul>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                </ul>
+            </div>
+
+            <div class="sec contact">
+                <h2>Contact Info</h2>
+                <ul class="info">
+                    <li>
+                        <span><i class="fa-solid fa-location-dot" aria-hidden="true"></i></span>
+                        <span>Nairobi, Kenya.</span>
+                    </li>
+
+                    <li>
+                        <span><i class="fa-solid fa-phone" aria-hidden="true"></i></span>
+                        <p><a href="tel:+254705353575">+254705353575</a></p>
+                        
+                    </li>
+
+                    <li>
+                        <span><i class="fa-solid fa-envelope" aria-hidden="true"></i></span>
+                        <p><a href="mailto:info@abstudiosdigital.com">info@abstudiosdigital.com</a></p>
+                        
+                    </li>
+                </ul>
+            </div>
+    </footer>
+
+    <div class="copyrightText">
+        <p>Copyright © 2025 AB Studios. All rights Reserved. </p>
+    </div>
+
+
+    
+    <script src="assets/js/main.js"></script>
+    <script type="module" src="assets/js/script.js"></script>
+    <script src="assets/js/loader.js"></script>
+   
+</body>
+</html>
