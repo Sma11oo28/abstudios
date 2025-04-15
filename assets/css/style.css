@@ -177,7 +177,7 @@ html {
     position: fixed;
     width: 100%;
     z-index: 1000;
-    transition: top 0.3s ease-in-out; 
+    transition: top 0.3s ease; 
     backdrop-filter: blur(10px);
     
     
