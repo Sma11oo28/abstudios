@@ -74,7 +74,7 @@
                     </div>
                     
                     <div class="about-right">
-                        <h2 class="autoDisplay">5+ Years of digital competence</h2>
+                        <h2>5+ Years of digital competence</h2>
                         <p class="about-text">Some stories begin in the most unexpected places. 
                             For AB Studios, it all started in the back row of a high school classroom, where two friends—Ryan (CEO) and Lawrence (Creative Director)—bonded over mischief, creativity, and an unshakable curiosity for innovation.</p>
                         <p class="about-text">Ryan, with no natural talent for art, often relied on Lawrence's artistic eye for school projects. Even when a class reshuffle separated them, their friendship remained strong. 
@@ -215,9 +215,39 @@
 
 
     
-    <script src="assets/js/main.js"></script>
-    <script type="module" src="assets/js/script.js"></script>
+    <script src="assets/js/Jquery3.7.1.min.js"></script>
     <script src="assets/js/loader.js"></script>
+    
+    <script src="assets/js/header.js"></script>
+    
+    
+    <script src="assets/js/mobile-menu.js"></script>
+    
+    
+
+    
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+          const observerOptions = {
+            threshold: 0.2
+          };
+        
+          const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add('in-view');
+              } else {
+                entry.target.classList.remove('in-view');
+              }
+            });
+          }, observerOptions);
+        
+          document.querySelectorAll('.autoBlur, .autoDisplay').forEach(el => {
+            observer.observe(el);
+          });
+        });
+        </script>
    
 </body>
 </html>
