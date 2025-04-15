@@ -7,15 +7,11 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    <script src="assets/js/Jquery3.7.1.min.js"></script>
+    
     
 
    
-    <script src="assets/js/main.js"></script>
-    <script type="module" src="assets/js/script.js"></script>
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-    <script src="assets/js/particle.js"></script> 
-    <script src="assets/js/loader.js"></script>
+
 
     
 </head>
@@ -558,6 +554,68 @@
     <div class="copyrightText">
         <p>Copyright © 2025 AB Studios. All rights Reserved. </p>
     </div>
+
+
+     <script src="assets/js/Jquery3.7.1.min.js"></script>
+    
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    
+    <script src="assets/js/particle.js"></script> 
+    <script src="assets/js/loader.js"></script>
+    <script src="assets/js/header.js"></script>
+    <script src="assets/js/hero-scroll.js"></script>
+    
+    <script src="assets/js/mobile-menu.js"></script>
+    <script src="assets/js/scroll-handler.js"></script>
+
+    <script type="module">
+        import KeenSlider from 'https://cdn.jsdelivr.net/npm/keen-slider@6.8.6/+esm';
+    
+        const keenSlider = new KeenSlider('#keen-slider', {
+            loop: true,
+            slides: {
+                origin: 'center',
+                perView: 1.25,
+                spacing: 16,
+            },
+            breakpoints: {
+                '(min-width: 1024px)': {
+                    slides: {
+                        origin: 'auto',
+                        perView: 1.5,
+                        spacing: 32,
+                    },
+                },
+            },
+        });
+    
+        document.getElementById('keen-slider-previous')?.addEventListener('click', () => keenSlider.prev());
+        document.getElementById('keen-slider-next')?.addEventListener('click', () => keenSlider.next());
+        document.getElementById('keen-slider-previous-desktop')?.addEventListener('click', () => keenSlider.prev());
+        document.getElementById('keen-slider-next-desktop')?.addEventListener('click', () => keenSlider.next());
+    </script>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+          const observerOptions = {
+            threshold: 0.2
+          };
+        
+          const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add('in-view');
+              } else {
+                entry.target.classList.remove('in-view');
+              }
+            });
+          }, observerOptions);
+        
+          document.querySelectorAll('.autoBlur, .autoDisplay').forEach(el => {
+            observer.observe(el);
+          });
+        });
+        </script>
 
     
 
