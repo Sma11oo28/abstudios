@@ -1646,7 +1646,7 @@ button a{
     }
 
     .nav ul li a {
-        font-size: 18px;
+        
         color: #e2e8f0;
         text-decoration: none;
         transition: color 0.3s ease-in-out;
@@ -1707,7 +1707,7 @@ button a{
     }
 
     .nav ul li a {
-        font-size: 14px; /* Scale down nav links */
+        font-size: 16px; /* Scale down nav links */
     }
 
     .social-icon {
@@ -1744,9 +1744,7 @@ button a{
         font-size: 16px; /* Reduce size of mobile menu icon */
     }
 
-    .nav ul li a {
-        font-size: 13px; /* Scale down nav links */
-    }
+   
 
     .social-icon {
         font-size: 14px; /* Reduce social media icon size */
