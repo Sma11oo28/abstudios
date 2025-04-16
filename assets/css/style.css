@@ -28,10 +28,19 @@
     height: 450%;
     top: 0;
     right: 0;
-    z-index: -1;
+    z-index: 0;
     pointer-events: none;
 }
 
+html,body {
+    scroll-behavior: smooth;
+    margin: 0;
+    padding: 0;
+    background-color: #44457d; 
+    
+    
+    
+}
 
 
 /* Loader Container */
