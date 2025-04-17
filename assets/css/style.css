@@ -844,7 +844,9 @@ details {
 .faq-item[open] .icon-svg {
     transform: rotate(-45deg);
 }
-
+summary::-webkit-details-marker {
+    display: none;
+}
 
 
 
